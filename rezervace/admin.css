@@ -1,0 +1,257 @@
+:root {
+    --textColor: #000000;
+    --backGround: #7AB2B2;
+    --backGround2: #EEF7FF;
+    --specialColor: #4D869C;
+}
+
+body {
+    background-color: var(--backGround);
+    color: var(--backGround2);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#admin-section {
+    background-color: var(--backGround2);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#admin-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--backGround);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: var(--backGround);
+    color: var(--backGround2);
+}
+
+.table tbody tr:hover {
+    background-color: var(--specialColor);
+    color: #ffffff;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--backGround);
+}
+
+.table th {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table td {
+    color: var(--textColor);
+}
+@media (max-width: 992px) {
+    #admin-section {
+        padding: 20px;
+    }
+
+    #admin-section h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #logout-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    #admin-section {
+        padding: 15px;
+    }
+
+    #admin-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    #logout-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #admin-section {
+        padding: 10px;
+    }
+
+    #admin-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .table th, .table td {
+        font-size: 0.55rem;
+        padding: 6px;
+    }
+
+    #logout-button {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+
+    .table {
+        font-size: 0.7rem;
+    }
+}
+.btn-danger {
+    background: linear-gradient(135deg, var(--specialColor), #ff5733);
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #ff6f4d, var(--specialColor));
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--backGround), #3a4f5f);
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #4a5f6f, var(--backGround));
+    transform: scale(1.05);
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: var(--backGround);
+    color: var(--backGround2);
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-footer .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+#login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#login-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#login-section .form-label {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#login-section .form-control {
+    border: 1px solid var(--backGround);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#login-section .form-control:focus {
+    border-color: var(--specialColor);
+    box-shadow: 0 0 5px rgba(254, 119, 67, 0.5);
+    outline: none;
+}
+
+#login-section .btn-primary {
+    background: var(--specialColor);
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#login-section .btn-primary:hover {
+    background: #ff8a50;
+    transform: scale(1.05);
+}
+
+#login-section .btn-primary:active {
+    transform: scale(0.95);
+}
+
+#login-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    #admin-section {
+        padding: 20px;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #admin-section h1 {
+        font-size: 2rem;
+    }
+}
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate].active {
+    opacity: 1;
+    transform: translateY(0);
+}

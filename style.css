@@ -1,0 +1,845 @@
+
+:root {
+    --text-color: white;
+    --special-color: rgb(0, 105, 0);
+    --background-color: #e9e1da;
+    --button-hover-color: rgb(0, 139, 0);
+    --secondary-text-color: #000000;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    width: 100%;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    transition: background-color 0.3s ease; 
+}
+
+.navbar.transparent {
+    background-color: transparent !important; 
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important; 
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.navbar-logo {
+    height: 50px; 
+    width: auto;
+}
+
+.navbar-title {
+    font-size: 1.3rem; 
+    font-weight: 500;
+    color: white; 
+    text-transform: capitalize; 
+    letter-spacing: 0.5px; 
+    font-family: 'Georgia', serif; 
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link {
+    position: relative;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: width 0.3s ease; 
+}
+
+.navbar-nav .nav-link:hover::after {
+    
+    width: 100%; 
+}
+.navbar-nav .nav-link:hover {
+    
+    color: rgb(0, 217, 0);
+   
+}
+
+.btn-special {
+    margin-left: 3rem;
+    background-color:var(--special-color);
+    color: var(--text-color);
+    border-radius: 5px;    
+    transition: background-color 0.3s ease; 
+}
+
+.btn-special:hover {
+    background-color:white;
+    
+}   
+.btn-special .special{
+    color: rgb(255, 255, 255) !important;
+}
+.navbar-nav .special::after {
+    content: none; 
+    color: rgb(0, 0, 0) !important;
+}
+.navbar-nav .special:hover {
+    content: none; 
+    color: var(--special-color) !important;
+}
+
+
+
+
+
+.navbar-toggler {
+  
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    padding: 0.375rem 0.75rem; 
+    border-radius: 0.25rem;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible,
+.navbar-toggler:target,
+.navbar-toggler[aria-expanded="true"] {
+  border: 2px solid white !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    
+    color: var(--text-color);
+    text-align: left;
+    padding: 2rem;
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 0; 
+}
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-section h1 {
+    margin-top: 100px;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+.special-text {
+    color: var(--special-color);
+}
+
+.hero-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.hero-section .button-group .btn {
+    margin-right: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-primary {
+    background-color: var(--special-color) !important; 
+    color: var(--text-color) !important; 
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color) !important; 
+}
+
+.btn-secondary {
+    background-color: var(--text-color) !important; 
+    color: var(--secondary-text-color) !important; 
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--special-color) !important; 
+    color: var(--background-color) !important;
+}
+
+/* Responsivní chování */
+@media (max-width: 992px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.874) !important;
+        backdrop-filter: blur(10px);
+    }
+    .btn-special {
+        margin-left: 0rem;
+        width: fit-content;
+    }
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h4 {
+        font-size: 1.2rem;
+    }
+
+    .hero-section .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section .btn {
+        margin-bottom: 1rem;
+    }
+}
+
+
+.animate-on-load {
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.animate-on-load.active {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+
+.reservation-section {
+    width: 100%;
+    padding: 6rem 0;
+    
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.reservation-section h1 {
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: var(--special-color);
+    text-transform: uppercase; 
+    text-align: center; 
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    position: relative;
+}
+
+.reservation-section h1::after {
+    content: ""; 
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    background-color: var(--special-color); 
+    border-radius: 2px; 
+}
+.reservation-section .reservation-image {
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-section .reservation-image:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-section .button-group {
+    display: flex;
+    gap: 1rem; 
+    margin-top: 1rem;
+}
+
+.reservation-section .btn-primary {
+    background-color: var(--special-color);
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-section .btn-primary:hover {
+    background-color: var(--button-hover-color);
+}
+
+.reservation-section .btn-secondary {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-section .btn-secondary:hover {
+    background-color: var(--secondary-text-color);
+    color: var(--background-color);
+}
+.reservation-section p {
+    font-size: 1.5rem;
+    line-height: 1.5; 
+    margin-bottom: 1rem; 
+    color: var(--secondary-text-color);
+    text-align: left;
+}
+/* Responsivní chování */
+@media (max-width: 992px) {
+    .reservation-section {
+        padding: 6rem 0;
+        
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    .reservation-section p {
+        padding:5px;
+        font-size: 1.5rem; 
+        line-height: 1.5; 
+        margin-bottom: 1rem; 
+        color: var(--secondary-text-color);
+        text-align: left;
+    }
+    .reservation-section .reservation-image {
+        height: 300px; 
+    }
+
+    .reservation-section .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reservation-section .btn-primary,
+    .reservation-section .btn-secondary {
+        width: 100%; 
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .reservation-section {
+        padding: 3rem 0;
+        
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    .reservation-section p {
+        padding:5px;
+        font-size: 1.1rem; 
+        line-height: 1.5; 
+        margin-bottom: 1rem;
+        color: var(--secondary-text-color); 
+        text-align: left;
+    }
+    .reservation-section .reservation-image {
+        height: 300px; 
+    }
+
+    .reservation-section .button-group {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .reservation-section .btn-primary,
+    .reservation-section .btn-secondary {
+        width: 100%; 
+        text-align: center;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+.reservation-section .container {
+    position: relative;
+    z-index: 1; 
+}
+
+
+
+.animate-on-scroll-contact {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Aktivní stav (viditelné prvky) */
+.animate-on-scroll-contact.active {
+    opacity: 1;
+    transform: scale(1) rotate(0); 
+}
+
+
+
+.gallery-section {
+    background-color: var(--background-color);
+    color: var(--text-color); 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding-bottom: 5rem;
+    padding-top: 7rem;
+}
+
+.gallery-section h2,
+.gallery-section .card {
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+
+.gallery-section h2.animate,
+.gallery-section .card.animate {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+.gallery-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--special-color); 
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: none; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: scale(1.05) !important;    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.card-img-top {
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0; 
+}
+
+.card-body {
+    padding: 1.5rem; 
+}
+
+.card-title {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: var(--special-color);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--text-color); 
+    line-height: 1.6; 
+}
+.btn-primary {
+    background-color: var(--special-color);
+    border: none !important;
+    text-transform: uppercase;
+    font-weight:600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color);
+}
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 700; 
+    color: var(--special-color); 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    text-align: center; 
+    position: relative; 
+    margin-bottom: 3rem; 
+    font-family: 'Poppins', sans-serif; 
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.section-title::before {
+    content: ""; 
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px; 
+    height: 4px; 
+    background-color: var(--special-color); 
+    border-radius: 2px;
+}
+
+.section-title::after {
+    content: ""; 
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px; 
+    background-color: var(--special-color); 
+    border-radius: 2px; 
+}
+
+@media (max-width: 768px) {
+    
+    .section-title {
+        font-size: 2.5rem; 
+        letter-spacing: 2px; 
+    }
+
+    .section-title::before,
+    .section-title::after {
+        width: 60px; 
+    }
+    .contact-section h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: var(--special-color);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
+        opacity: 0; 
+        transform: scale(0.8) rotate(-5deg); 
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+}
+
+
+.contact-section {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+
+    padding: 4rem 2rem;
+    background-color: var(--background-color); 
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 10px; 
+    margin: 0 auto; 
+    
+    
+}
+
+.contact-section h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--special-color);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0; 
+    transform: scale(0.8) rotate(-5deg); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-text-color);
+    opacity: 0; 
+    transform: scale(0.8) rotate(-5deg);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    transform: scale(0.8) rotate(-5deg); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    
+}
+
+.contact-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-section label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: var(--special-color);
+    box-shadow: 0 0 5px rgba(0, 105, 0, 0.5); 
+    outline: none;
+}
+
+.contact-section button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #28a745, #218838); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 0 auto; 
+}
+
+.contact-section button:hover {
+    background: linear-gradient(90deg, #218838, #1e7e34); 
+    transform: scale(1.05); 
+}
+
+.contact-section button:active {
+    transform: scale(0.95); 
+}
+
+
+.footer {
+    background-color: var(--special-color); 
+    color: var(--text-color); 
+    padding: 2rem 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); 
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 2rem; 
+    flex-wrap: wrap; 
+}
+
+.footer-left {
+    display: flex;
+    gap: 2rem; 
+    flex: 1; 
+}
+
+.footer-column {
+    text-align: left; 
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color); 
+}
+
+.footer-column p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    color: var(--text-color); 
+}
+
+.footer-logo {
+    flex: 0 0 auto; 
+    text-align: center;
+}
+
+.footer-logo-img {
+    height: 110px; 
+    width: auto;
+    transition: transform 0.3s ease; 
+}
+
+.footer-logo-img:hover {
+    transform: scale(1.1); 
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 1rem; 
+    flex: 1; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.social-icon {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease; 
+}
+
+.social-icon:hover {
+    transform: scale(1.2); 
+}
+
+.copyright {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: right; 
+}
+
+@media (max-width: 992px) {
+    
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 1rem; 
+    }
+
+    .footer-logo {
+        margin-bottom: 1rem; 
+    }
+
+    .social-icons {
+        justify-content: center; 
+        gap: 1rem; 
+    }
+
+    .copyright {
+        text-align: center; 
+        font-size: 0.9rem; 
+        margin-top: 1rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        gap: 1.5rem; 
+    }
+
+    .footer-left,
+    .footer-right {
+        gap: 0.5rem; 
+    }
+
+    .social-icons {
+        gap: 0.75rem;
+    }
+
+    .footer-logo-img {
+        height: 80px; 
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+
