@@ -54,47 +54,135 @@
         <div class="container">
             <h2 class="offer-title" data-animate="slideDown">Rezervace</h2>
             <div class="row">
-                <div class="col-lg-6 table-section" data-animate="fadeInLeft">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Typ</th>
-                                <th>Cena</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="radio" name="typ" checked> Pro oslavu 50 Lidi</td>
-                                <td>do 45 000 Kč bez DPH</td>
-                            </tr>
-                            <tr>
-                                <td><input type="radio" name="typ"> Pro oslavu nad 50 Lidi</td>
-                                <td>od 60 000 Kč bez DPH</td>
-                            </tr>
-                            <tr>
-                                <td><input type="radio" name="typ"> Možnost ubytování Hostů</td>
-                                <td>od 1 100 Kč bez DPH za apartmán</td>
-                            </tr>
-                            <tr>
-                                <td><input type="radio" name="typ"> Pronájem sauny</td>
-                                <td>8 000 Kč za den</td>
-                            </tr>
-                            <tr>
-                                <td><input type="radio" name="typ"> Pronájem sauny</td>
-                                <td>od 2 dnů 7 000 za den</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-lg-6 form-section" data-animate="fadeInRight">
-                    <form>
-                        <input type="text" placeholder="Jméno a příjmení" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="number" placeholder="Číslo občanky" required>
-                        <textarea placeholder="Informace o rezervaci"></textarea>
-                        <button type="submit">Poslat žádost</button>
-                    </form>
-                </div>
+                <div class="row">
+    <!-- Apartmány -->
+    <div class="col-lg-6 col-xl-4 table-section mb-4" data-animate="fadeInLeft">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Apartmány</th>
+                </tr>
+                <tr>
+                    <th>Typ</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="typ" checked> Dvoulužko</td>
+                    <td>1 350 Kč za noc</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="typ"> Třílužko</td>
+                    <td>2 025 Kč za noc</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="typ"> Čtyřlužko</td>
+                    <td>2 700 Kč za noc</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Sauna -->
+    <div class="col-lg-6 col-xl-4 table-section mb-4" data-animate="fadeInLeft">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Pronájem dřevěné SAUNY</th>
+                </tr>
+                <tr>
+                    <th>Typ</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="typ"> 1 den</td>
+                    <td>10 000 Kč</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="typ"> 2 a více dní</td>
+                    <td>8 000 Kč za den</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Rybolov -->
+    <div class="col-lg-6 col-xl-4 table-section mb-4" data-animate="fadeInLeft">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Rybolov</th>
+                </tr>
+                <tr>
+                    <th>Typ</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="typ"> Den</td>
+                    <td>600 Kč</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="typ"> 1 kg ryby</td>
+                    <td>350 Kč</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Restaurace -->
+    <div class="col-lg-6 col-xl-4 table-section mb-4" data-animate="fadeInLeft">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Pronájem restaurace</th>
+                </tr>
+                <tr>
+                    <th>Typ</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="typ"> Restaurace</td>
+                    <td>14 000 Kč za dobu</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Celý penzion -->
+    <div class="col-lg-6 col-xl-4 table-section mb-4" data-animate="fadeInLeft">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="2">Pronájem celého penzionu</th>
+                </tr>
+                <tr>
+                    <th>Typ</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="typ"> Celý penzion</td>
+                    <td>45 000 Kč za 3 dny (2 noci)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+                <div class="col-12 d-flex ">
+        <div class="col-lg-6 col-md-8 form-section" data-animate="fadeInRight">
+            <form>
+                <input type="text" placeholder="Jméno a příjmení" required>
+                <input type="email" placeholder="Email" required>
+                <input type="number" placeholder="Číslo občanky" required>
+                <textarea placeholder="Informace o rezervaci"></textarea>
+                <button type="submit">Poslat žádost</button>
+            </form>
+        </div>
+    </div>
             </div>
         </div>
     </section>
