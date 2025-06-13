@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const scrollElements = document.querySelectorAll(".animate-on-scroll");
 
