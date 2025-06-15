@@ -396,21 +396,24 @@ body {
 }
 @media (max-width: 500px) {
     .reservation-section {
-        padding: 3rem 0;
+        padding: 3rem 1rem;
         
         background-color: var(--background-color);
         color: var(--text-color);
     }
     .reservation-section p {
-        padding:5px;
-        font-size: 1.1rem; 
+        margin-top: 1rem;
+       
+        font-size: 1rem; 
+        font-weight: 520;
         line-height: 1.5; 
         margin-bottom: 1rem;
         color: var(--secondary-text-color); 
-        text-align: left;
+        text-align: center;
     }
     .reservation-section .reservation-image {
         height: 300px; 
+        
     }
 
     .reservation-section .button-group {

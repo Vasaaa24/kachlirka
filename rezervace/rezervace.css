@@ -149,8 +149,10 @@
 @media (max-width: 992px) {
     .form-section form {
         margin-top: 20px;
+        
     }
     #offer-section .row {
+        margin-left: 0px;
         flex-direction: column;
     }
     .table-section, .form-section {
