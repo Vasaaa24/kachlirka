@@ -1,11 +1,13 @@
-
-
-
-
-
-
-
-
+// Zavře mobilní menu po kliknutí na libovolný odkaz v navigaci
+document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+        var navbarCollapse = document.getElementById('navbarSupportedContent');
+        if (navbarCollapse.classList.contains('show')) {
+            var bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+            bsCollapse.hide();
+        }
+    });
+});
 document.addEventListener("DOMContentLoaded", function () {
   const scrollElements = document.querySelectorAll(".animate-on-scroll");
 
