@@ -175,3 +175,19 @@
     opacity: 0;
     transform: translateY(-20px);
 }
+/* Přidej do svého CSS (např. style.css nebo rezervace.css): */
+@media (max-width: 767px) {
+  .form-section {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 95vw !important;
+    min-width: 0 !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .form-section form {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}

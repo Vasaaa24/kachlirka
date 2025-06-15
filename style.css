@@ -823,6 +823,10 @@ body {
     .footer-content {
         gap: 1.5rem; 
     }
+    .btn-secondary {
+    margin-bottom: 20px;
+}
+
 
     .footer-left,
     .footer-right {
